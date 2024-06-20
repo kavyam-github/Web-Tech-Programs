@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header {
+            margin-left: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <form style="background-color: aqua;border: 4px solid pink;border-bottom: none;">
+        <div>
+            <h1 class="header">Student Registration Form</h1>
+            <hr>
+            <div class="name">
+                Firstname: <br>
+                <input type="text" placeholder="Firstname" style="width: 99%;height: 50px;" required>
+            </div> <br>
+            <div class="middle">
+                Middlename:
+                <input type="text" placeholder="middlename" style="width: 99%;height: 50px;">
+            </div> <br>
+
+            <div class="last">
+                Lastname: <br>
+                <input type="text" placeholder="lastname" style="width: 99%;height: 50px;">
+            </div> <br>
+
+            <div class="course">
+                course:
+                <select name="course">
+                    <option value="course">course</option>
+                    <option value="syllabus">syllabus</option>
+                </select>
+            </div> <br>
+
+            <div class="Gender">
+                Gender: <br>
+                <input type="radio" name="g">Male
+                <input type="radio" name="g">Female
+                <input type="radio" name="g">other
+            </div> <br>
+
+            <div class="Phone">
+                Phone: <br>
+                <input type="number" placeholder="+91" style="width: 99%;height: 50px;" required> <br> <br>
+                <input type="number" placeholder="Phone no" style="width: 99%;height: 50px;">
+            </div> <br>
+
+            <div class="Address">
+                Current Address: <br>
+                <textarea name="" rows="5" id="" placeholder="current address"
+                    style="width: 99%;height: 50px;"></textarea>
+            </div>
+
+            <div class="mail">
+                Email: <br>
+                <input type="email" placeholder="Enter Email" style="width: 99%;height: 50px;" required>
+            </div> <br>
+
+            <div class="Password">
+                Password: <br>
+                <input type="password" placeholder="enter password" style="width: 99%;height: 50px;" required>
+            </div> <br>
+
+            <div>
+                Re-type password <br>
+                <input type="password" placeholder="Reright password" style="width: 99%;height: 50px;">
+            </div> <br>
+
+            <div style="display: flex; justify-content: center;align-items: center;">
+                <button style="background-color: green;width: 20%;height: 50px;">sumbit</button>
+                <button style="background-color: green;width: 20%;height: 50px;margin-left: 15px;">cancel</button>
+
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

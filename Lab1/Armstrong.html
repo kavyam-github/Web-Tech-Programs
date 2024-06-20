@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a=(prompt("enter number: "));
+       backup=a;
+       sum=0;
+        while(a!=0){
+            temp=a%10;
+            sum=sum+(temp*temp*temp);
+            a=parseInt(a/10);
+        }
+        if(sum==backup){
+            document.write("entered number is Armstrong");
+        }
+        else{
+            document.write("entered number is not Armstrong");
+        }
+    </script>
+</body>
+</html>

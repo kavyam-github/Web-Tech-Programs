@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x=parseInt(prompt("enter number: "))
+        let a=x;
+        let rem;
+        let sum=0;
+        while(x!=0){
+            rem=x%10;
+            sum=(sum*10)+rem;
+            x=parseInt(x/10);
+        }
+        if(sum==a){
+            document.write("number is peledrome");
+        }
+        else{
+            document.write("number is not peledrome");
+        }
+        console.log(sum+"----"+a)
+    </script>
+</body>
+</html>
