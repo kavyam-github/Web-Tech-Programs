@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,4 +27,34 @@
         document.write(num);
     </script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num = [];
+        var size = parseInt(prompt("Enter Size of an Array"));
+
+        for (let i = 0; i < size; i++) {
+            Element = parseInt(prompt(`Enter ${i} Element ::`));
+            num.push(Element);
+        }
+        for(i = 0; i<num.length;i++){
+            for(j = 0; j<num.length-1;j++){
+                if(num[j]>num[j+1]){
+                    temp = num[j];
+                    num[j]=num[j+1];
+                    num[j+1] = temp;
+                }
+            }
+        }
+        document.write(num);
+    </script>
+</body>
+>>>>>>> 522df32b2f0b94a42d00759ec2f231332c222674
 </html>
