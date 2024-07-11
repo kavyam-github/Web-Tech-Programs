@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <label>User Name : </label>
+    <input type="text" id="username"> <br> <br>
+
+    <label>Password : </label>
+    <input type="password" id="pswd"> <br> <br>
+
+    <label>REPPassword : </label>
+    <input type="password" id="rpswd"> <br> <br>
+
+    <label>Age : </label>
+    <input type="number" id="Age"> <br> <br>
+
+    <label>Enrollment : </label>
+    <input type="number" id="Enrollment"> <br> <br>
+
+    <label>Email : </label>
+    <input type="email" id="Email"> <br> <br>
+
+    <button onclick="validate()">Submit</button>
+    <div id="valid" style="color: green;"></div>
+    <div id="invalid" style="color: red;"></div>
+
+
+    <script>
+        function validate() {
+            var username = document.getElementById("username").value;
+            userregex = /^[a-zA-Z0-9]+([._]?[a-zA-Z0-9]+)*$/;
+
+            var Password = document.getElementById("pswd").value;
+            passregex = /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"/;
+
+            var REPPassword = document.getElementById("rpswd").value;
+            repregex = /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"/;
+
+            var Age = document.getElementById("Age").value;
+            ageregex = /^\S[0-9]{0,3}$/;
+
+            var Enrollment = document.getElementById("Enrollment").value;
+            enreregex = "/^(reg)_(no) [0-9]{2}[(BS)|(MS)]{2}[(CS)|(SE)]{2}\-[0-9]{1}$/";
+
+            var Email = document.getElementById("Email").value;
+            emailexpression = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+
+
+
+            if (userregex.test(username) == true) {
+                document.getElementById("valid").innerHTML = "valid username"
+                document.getElementById("valid").innerHTML="";
+            }
+            else {
+                document.getElementById("invalid").innerHTML = "invalid username"
+                document.getElementById("invalid").innerHTML="";
+
+            }
+            if (passregex.test(Password)) {
+                document.getElementById("valid").innerHTML = "valid password"
+                document.getElementById("valid").innerHTML=" ";
+
+            }
+            else {
+                document.getElementById("invalid").innerHTML = "invalid password"
+                document.getElementById("invalid").innerHTML=" ";
+
+            }
+            if (Password==Password) {
+                document.getElementById("valid").innerHTML = "valid repassword"
+                document.getElementById("valid").innerHTML=" ";
+            }
+            else {
+                document.getElementById("invalid").innerHTML = "invalid repassword"
+                document.getElementById("invalid").innerHTML=" ";
+
+            }
+            if (ageregex.test(Age)) {
+                document.getElementById("valid").innerHTML = "valid age"
+                document.getElementById("valid").innerHTML=" ";
+
+            }
+            else {
+                document.getElementById("invalid").innerHTML = "invalid age"
+                document.getElementById("invalid").innerHTML=" ";
+
+            }
+            if (enreregex.test(Enrollment)) {
+                document.getElementById("valid").innerHTML = "valid enrollment"
+                document.getElementById("valid").innerHTML=" ";
+
+            }
+            else {
+                document.getElementById("invalid").innerHTML = "invalid enrollment"
+                document.getElementById("invalid").innerHTML=" ";
+
+            }
+            if (emailexpression.test(Email)) {
+                document.getElementById("valid").innerHTML = "valid email"
+                document.getElementById("valid").innerHTML=" ";
+
+            }
+            else {
+                document.getElementById("invalid").innerHTML = "invalid email"
+                document.getElementById("invalid").innerHTML=" ";
+
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>
