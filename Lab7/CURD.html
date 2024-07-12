@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="name" placeholder="enter entry">
+    <button onclick="addFunction()">Add</button>
+    <input type="text" id="index" placeholder="Enter index">
+    <input type="text" id="value" placeholder="Enter value">
+    <button onclick="editFunction()">Edit</button>
+    <div id="print"></div>
+    <script>
+        const arr=[];
+        function addFunction()
+        {
+            a=document.getElementById("name");
+            arr.push(a.value);
+            a.value="";
+            dispaly();
+           
+        }
+        
+        function dispaly()
+        {
+            console.log(arr);
+            dis=document.getElementById("print");
+            dis.innerHTML=" ";
+            for(i=0;i<arr.length;i++){
+                dis.innerHTML+=arr[i]+
+                `<button onclick="deleteFunction(${i})">Delete</button>`+'<br>'+'<br>';
+            }
+        }
+        
+        function deleteFunction(index)
+        {   
+            arr.splice(index,1);
+            dispaly();
+        }
+
+        function editFunction()
+        {
+            index=document.getElementById("index").value;
+            value=document.getElementById("value").value;
+            arr[index]=value;
+            dispaly();
+        }
+
+    </script>
+</body>
+</html>
